@@ -1,13 +1,63 @@
 body {
-	font-family: 'Courier New', Courier, monospace;
+
+	font-family: Futura Std;
 
 	height: 100%;
+	margin: 0;
+
+	@media screen and (min-width: 500px) {
+		.content {
+			.content-container {
+				max-width: 300px;
+			}
+		}
+	}
+
+
+	.optionalParent {
+		margin-top: 1em;
+	}
+
+	.vert-container {
+		margin-top: 2em;
+	}
+
+	h1 {
+		font-size: 16pt;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	h2 {
+		font-size: 14pt;
+		font-weight: 600;
+		font-family: Futura Std;
+	}
+
+	p {
+		font-size: 11pt;
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		unicode-bidi: isolate;
+		font-family: Futura std;
+	}
+
+	a {
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	.faq {
+		font-size: 16pt;
+	}
 
 	header {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 1em;
 
 		.header-container {
 			.header-img {	
@@ -15,8 +65,32 @@ body {
 				flex-direction: row; 
 				align-items: baseline;
 				margin-top: 15px;
+
 				img {
 					width: 15em;
+				}
+			}
+
+			.intro {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin-top: 0em;
+				margin-bottom: 1em;
+
+				justify-content: center;
+				align-items: center;
+
+				.text {
+					justify-content: center;
+					align-items: center;
+					padding-bottom: 0px;
+					text-align: center;
+
+					p {
+						margin-block-start: 0px;
+						margin-block-end: 0px;
+					}
 				}
 			}
 		}
@@ -30,74 +104,99 @@ body {
 		flex-direction: column;
 		width: 100%;
 
-		.intro {
+		.content-container {
 			display: flex;
+			justify-content: center;
+			align-items: start;
 			flex-direction: column;
 			width: 75%;
-			padding-top: 50px;
-			padding-bottom: 50px;
 
-			justify-content: center;
-			align-items: center;
-
-			.text {
-				width: fit-content;
+			.issues {
+				display: flex;
 				justify-content: center;
-				align-items: center;
-				padding-bottom: 0px;
-				p {
-					margin-block-start: 0px;
-					margin-block-end: 0px;
-				}
-			}
-		}
-		.issues {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			width: 65%;
+				align-items: start;
+				flex-direction: column;
+				width: 65%;
+				margin-bottom: 2em;
 
-				.div-issue {
-					padding-bottom: 15px;
-				}
-		}
-		.kontakt {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-
-			.text {
-				width: 50%;
-			}
-
-			.SoMe {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			margin-top: 50px;
-
-				.SoMe-buttons {
+				.div-issues {
 					display: flex;
-					justify-content: center;
-					align-items: center;
-					flex-direction: row;
+					flex-direction: column;
 
-					.SoMe-button img {
-						width: 30px;
-						margin: 6px;
+					.div-issue {
+							padding-bottom: 0px;
 					}
 				}
-			}	
+			}
+
+			.kontakt {
+				display: flex;
+				justify-content: center;
+				align-items: start;
+				flex-direction: column;
+
+				.text {
+					width: 50%;
+					text-align: start;
+					font-family: Futura std;
+				}
+
+				.SoMe {
+				display: flex;
+				align-items: center;
+				flex-direction: row;
+				margin-top: 1em;
+				margin-bottom: 1em;
+				padding: 1em;
+				background-color: bisque;
+				max-width: 250px;
+
+				.text {
+					margin-left: 1em;
+					justify-content: center;
+					align-items: center;
+					width: max-content;
+				}
+
+					.SoMe-buttons {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						.SoMe-button img {
+							width: 30px;
+							margin: 0.5em;
+						}
+					}
+				}	
+
+				.intro {
+					margin-top: 1em;
+				}
+			}
+
+			.vert-container {
+				h2 {
+					margin-top: 1.5em;
+					margin-bottom: 0px;
+				}
+
+				p {
+					max-width: max-content;
+					margin-top: 5px;
+
+					pre {
+						max-width: 250px;
+					}
+				}
+			}
 		}
-		
 	}
 	
 	footer {
 		width: 100%;
-		height: 2.5em;
+		height: max-content;
 		color: white;
 		background-color: rgb(144, 26, 30);
 
@@ -106,11 +205,12 @@ body {
 		align-items: end;
 		flex-direction: row;
 
-		margin-top: auto;
-		padding-bottom: 50px;
+		margin-top: 2em;
+		padding-top: 3em;
+		padding-bottom: 5em;
 
-		position: absolute;
- 		left: 0;
- 		bottom: 0;
+		.footer-box {
+			width: 300px;
+		}
 	}
 }
